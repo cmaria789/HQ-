@@ -1,0 +1,142 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', 'Arial', sans-serif;
+      background: #0b0b0d;
+      color: #f2f2f2;
+      overflow: visible;
+      background:
+      radial-gradient(circle at top, rgba(199,90,90,0.25), transparent 40%),
+      radial-gradient(circle at bottom, rgba(163, 19, 19, 0.9), #000 70%);
+
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(180deg, #9e1c1c, #000);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 2px;
+    }
+
+     header p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .webtoon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+      padding: 40px 0;
+      min-height: 100vh;
+      height: auto;
+    }
+
+    .quadro {
+      width: 90%;
+      max-width: 420px;
+      position: relative;
+      opacity: 0;
+      transform: translateY(80px) scale(0.96);
+      transition: all 0.8s ease;
+      box-shadow: 0 25px 60px rgb(31, 5, 5);
+    }
+    
+     .quadro.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      animation: aparecer 0.9s ease forwards;
+    }
+
+    .quadro img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      transform: scale(1.02);
+      transition: 0.4s ease;
+      border-radius: 16px;
+    }
+
+    .fala {
+      margin-top: 15px;
+      background: #ffffff;
+      color: #000;
+      padding: 15px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      height: auto;
+      width: 100%;
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #ffffff, #a08585);
+      padding: 12px;
+      border-radius: 22px;
+    }
+
+    .fala.deus {
+      background: #f5e9b8;
+      font-weight: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 1px;
+    }
+
+.capitulo {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: #f5dcdc;
+  margin: 60px 0 20px;
+  position: relative;
+}
+
+.capitulo::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #c75a5a;
+  margin: 10px auto;
+}
+    
+
+    @keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .quadro {
+    font-size: 0.9rem;
+  }
+
+  .fala {
+     max-width: 95%;
+  }
+}
+
